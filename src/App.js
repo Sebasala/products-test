@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import productsData from './data/products';
 
+import Product from './components/Product';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +19,9 @@ class App extends Component {
 
   render() { 
     return ( 
-        <h1>{this.state.products[0] ? this.state.products[0].name : "Loading..."}</h1>
+        <ul className="products">
+          <Product name={this.state.products[0] ? this.state.products[0].name : ""} />
+        </ul>
      );
   }
 }
