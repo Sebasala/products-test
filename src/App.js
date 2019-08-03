@@ -6,9 +6,9 @@ import Product from './components/Product';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       products: []
-     }
+    }
   }
 
   componentDidMount() {
@@ -20,7 +20,11 @@ class App extends Component {
   render() { 
     return ( 
         <ul className="products">
-          <Product name={this.state.products[0] ? this.state.products[0].name : ""} />
+          <Product 
+            name={this.state.products[0] ? this.state.products[0].name : ""}
+            categories={this.state.products[0] ? this.state.products[0].categories : []}
+            brand={this.state.products[0] ? this.state.products[0].brand : ""}
+          />
         </ul>
      );
   }
