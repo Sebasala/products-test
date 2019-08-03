@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
+import productsData from './data/products';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello Team-International!</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit exercitationem laboriosam est cum voluptatum assumenda animi dignissimos, vitae voluptatem sapiente omnis quia, eos minima consequuntur perferendis culpa mollitia error harum?</p>
-      <i className="material-icons">face</i>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      products: []
+     }
+  }
+
+  componentDidMount() {
+    this.setState({
+      products: productsData
+    })
+  }
+
+  render() { 
+    return ( 
+        <h1>{this.state.products[0] ? this.state.products[0].name : "Loading..."}</h1>
+     );
+  }
 }
-
+ 
 export default App;
