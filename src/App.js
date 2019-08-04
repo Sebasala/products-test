@@ -1,29 +1,23 @@
-import React, { Component } from 'react';
-import productsData from './data/products';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import HomeRoute from './components/HomeRoute';
+import ClientsRoute from './components/ClientsRoute';
+import ContactsRoute from './components/ContactsRoute';
+import ProductsRoute from './components/ProductsRoute';
+import NoMatch from './components/NoMatch';
 
-import Products from './components/Products';
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      products: []
-    }
-  }
-
-  componentDidMount() {
-    this.setState({
-      products: productsData
-    })
-  }
-
-  render() { 
-    return ( 
-        <div>
-          <Products products={this.state.products} />
-        </div>
-     );
-  }
+const App = (props) => {
+  return ( 
+    <Router>
+      <Switch>
+        <Route exact path="/" component={HomeRoute} />
+        <Route path="/clients" component={ClientsRoute} />
+        <Route path="/contacts" component={ContactsRoute} />
+        <Route path="/products" component={ProductsRoute} />
+        <Route component={NoMatch} />
+      </Switch>
+    </Router>
+  );
 }
  
 export default App;

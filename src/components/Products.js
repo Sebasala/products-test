@@ -4,11 +4,20 @@ import PropTypes from 'prop-types';
 import Product from './Product';
 
 const Products = (props) => {
+    let filteredProducts;
+
+    if (props.category === "All") {
+        filteredProducts = props.products;
+    } else {
+        filteredProducts = props.products.filter(product => product.categories.includes(props.category));
+    }
+
     return ( 
         <ul className="products">
-            {props.products.map(product => {
+            {filteredProducts.map(product => {
                 return (
-                    <Product 
+                    <Product
+                        key={product.id} 
                         name={product.name}
                         categories={product.categories}
                         brand={product.brand}
@@ -24,7 +33,8 @@ const Products = (props) => {
 }
 
 Products.propTypes = {
-    products: PropTypes.array.isRequired
+    products: PropTypes.array.isRequired,
+    category: PropTypes.array.isRequired
 }
  
 export default Products;

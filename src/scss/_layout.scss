@@ -18,7 +18,8 @@ img {
 
 /* BLOCKS */
 .product {
-	margin-bottom: 2 * $blh;
+	margin: 0 auto 2 * $blh;
+	max-width: 1.6 * $text-max-width;
 
 	&__stock,
 	&__price {
@@ -38,6 +39,11 @@ img {
 		&__figure {
 			padding: 16px 16px 24px;
 			height: 16 * $blh;
+			max-width: 235px;
+		}
+
+		&__info {
+			flex: 1 0 auto;
 		}
 
 		&__img{
