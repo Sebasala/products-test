@@ -57,3 +57,11 @@ img {
 .products {
 	padding: 0 2 * $blh;
 }
+
+.products-container {
+	&__p {
+		max-width: calc(#{1.6 * $text-max-width} + #{4 * $blh});
+		margin: 0 auto $blh;
+		padding: 0 2 * $blh;
+	}
+}
