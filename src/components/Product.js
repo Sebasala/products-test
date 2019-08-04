@@ -9,9 +9,21 @@ const Product = (props) => {
     let subtitle = [categories, brand].join(" - ");
 
     return ( 
-        <li className="Product">
+        <li className="product">
             <Card>
-                <CardTitle title={props.name} subtitle={subtitle} />
+                <CardTitle className="product__header" title={props.name} subtitle={subtitle} />
+                <div className="product__container">
+                    <figure className="product__figure">
+                        <img className="product__img" src={props.img} alt="Product"/>
+                    </figure>
+                    <div className="product__info">
+                        <CardText>
+                            <p className="product__description">{props.description}</p>
+                            <p className="product__stock"><strong>Stock: </strong>{props.stock}</p>
+                            <p className="product__price"><strong>Price: </strong>${props.price}</p>
+                        </CardText>
+                    </div>
+                </div>
             </Card>
         </li>
      );
@@ -20,7 +32,11 @@ const Product = (props) => {
 Product.propTypes = {
     name: PropTypes.string.isRequired,
     categories: PropTypes.array.isRequired,
-    brand: PropTypes.string.isRequired
+    brand: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    stock: PropTypes.number.isRequired,
+    price: PropTypes.string.isRequired
 }
  
 export default Product;

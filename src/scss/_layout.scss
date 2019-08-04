@@ -1,14 +1,12 @@
-/* GENERAL */
+/* DEFAULTS */
 * {
 	box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6,
-p, li,
-.buttons {
+p {
 	max-width: $text-max-width;
-	padding: 0 2 * $blh;
-	margin: 0 auto 2 * $blh;
+	margin-bottom: $blh;
 }
 
 img {
@@ -16,5 +14,38 @@ img {
 	object-position: center;
 	display: block;
 	max-width: 100%;
-	margin: 0 auto 2 * $blh;
+}
+
+/* BLOCKS */
+.product {
+	&__stock,
+	&__price {
+		margin-bottom: 0;
+	}
+
+	@media screen and (min-width: 2 * $base-bp) {
+		&__container {
+			display: flex;
+		}
+
+		&__figure,
+		&__info {
+			width: 50%;
+		}
+
+		&__figure {
+			padding: 16px 16px 24px;
+			height: 16 * $blh;
+		}
+
+		&__img{
+			object-fit: contain;
+			height: 100%;
+			margin: 0 auto;
+		}
+	}
+}
+
+.products {
+	padding: 0 2 * $blh;
 }

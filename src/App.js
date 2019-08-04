@@ -24,6 +24,10 @@ class App extends Component {
             name={this.state.products[0] ? this.state.products[0].name : ""}
             categories={this.state.products[0] ? this.state.products[0].categories : []}
             brand={this.state.products[0] ? this.state.products[0].brand : ""}
+            img={this.state.products[0] ? this.state.products[0].photo : ""}
+            description={this.state.products[0] ? this.state.products[0].description : ""}
+            stock={this.state.products[0] ? this.state.products[0].stock : 0}
+            price={this.state.products[0] ? this.state.products[0].price : ""}
           />
         </ul>
      );
