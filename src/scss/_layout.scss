@@ -18,6 +18,8 @@ img {
 
 /* BLOCKS */
 .product {
+	margin-bottom: 2 * $blh;
+
 	&__stock,
 	&__price {
 		margin-bottom: 0;
