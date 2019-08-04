@@ -16,7 +16,7 @@ const Products = (props) => {
     var hidden = props.products.length - shown;
 
     var shownSentence = <span>Showing <strong>{shown}</strong> products</span>;
-    var hiddenSentence = props.category === "All" ? <span></span> : <span> - Hidden: <strong>{hidden}</strong></span>;
+    var hiddenSentence = props.category === "All" ? "" : <span> - Hidden: <strong>{hidden}</strong></span>;
 
     return (
         <div className="products-container">
