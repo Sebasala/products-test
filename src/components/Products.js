@@ -34,7 +34,7 @@ const Products = (props) => {
 
 Products.propTypes = {
     products: PropTypes.array.isRequired,
-    category: PropTypes.array.isRequired
+    category: PropTypes.string.isRequired
 }
  
 export default Products;
