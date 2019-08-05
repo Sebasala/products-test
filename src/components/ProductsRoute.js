@@ -4,7 +4,7 @@ import { Route, Switch, NavLink } from 'react-router-dom';
 
 import Products from './Products';
 import ProductsCategory from './ProductsCategory';
-import { Drawer, Divider } from 'react-md';
+import { Drawer, Divider, FontIcon, Toolbar } from 'react-md';
 
 class ProductsRoute extends Component {
   constructor(props) {
@@ -23,19 +23,23 @@ class ProductsRoute extends Component {
   render() {
     let navItems = [
       <li><span>Categories</span></li>,
-      <li><NavLink exact to="/products"><i className="material-icons">list</i> All</NavLink></li>,
+      <li><NavLink exact to="/products"><FontIcon>list</FontIcon> All</NavLink></li>,
       <li className="md-list__divider-container"><Divider /></li>,
-      <li><NavLink to="/products/tech"><i className="material-icons">computer</i> Tech</NavLink></li>,
-      <li><NavLink to="/products/services"><i className="material-icons">build</i> Services</NavLink></li>,
-      <li><NavLink to="/products/office"><i className="material-icons">folder</i> Office</NavLink></li>
+      <li><NavLink to="/products/tech"><FontIcon>computer</FontIcon> Tech</NavLink></li>,
+      <li><NavLink to="/products/services"><FontIcon>build</FontIcon> Services</NavLink></li>,
+      <li><NavLink to="/products/office"><FontIcon>folder</FontIcon> Office</NavLink></li>
     ]
     
     return (
       <div className="products-page">
-        <Drawer 
+        <Toolbar
+          colored
+          fixed
+        />
+        <Drawer className="md-toolbar-relative"
           navItems={navItems}
         />
-        <div className="md-drawer-relative">
+        <div className="md-drawer-relative md-toolbar-relative">
           <Switch>
             <Route 
               path={`${this.props.match.path}/:category`} 
