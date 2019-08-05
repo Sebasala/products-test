@@ -9,6 +9,12 @@ p {
 	margin-bottom: $blh;
 }
 
+h1 {
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 2 * $blh;
+}
+
 img {
 	object-fit: cover;
 	object-position: center;

@@ -40,6 +40,8 @@ class ProductsRoute extends Component {
         />
         <Drawer className="md-toolbar-relative"
           navItems={navItems}
+          autoclose={false}
+          desktopMinWidth={768}
         />
         <div className="md-drawer-relative md-toolbar-relative">
           <Switch>
