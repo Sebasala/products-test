@@ -16,6 +16,13 @@ img {
 	max-width: 100%;
 }
 
+.material-icons {
+	line-height: 4 * $blh;
+	width: 4 * $blh;
+	text-align: center;
+	border-radius: 100%;
+}
+
 /* BLOCKS */
 .product {
 	margin: 0 auto 2 * $blh;
@@ -63,5 +70,26 @@ img {
 		max-width: calc(#{1.6 * $text-max-width} + #{4 * $blh});
 		margin: 0 auto $blh;
 		padding: 0 2 * $blh;
+	}
+}
+
+.md-list--drawer {
+	span {
+		padding-left: $blh;
+	}
+
+	.material-icons {
+		margin-right: $blh;
+	}
+
+	a {
+		display: flex;
+		height: 4 * $blh;
+		align-items: center;
+		padding-left: $blh;
+	}
+
+	li {
+		margin-bottom: $blh;
 	}
 }
