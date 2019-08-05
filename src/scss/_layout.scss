@@ -80,6 +80,12 @@ img {
 }
 
 .md-list--drawer {
+	.title-item {
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+
 	span {
 		padding-left: $blh;
 	}
@@ -92,11 +98,30 @@ img {
 		display: flex;
 		height: 4 * $blh;
 		align-items: center;
-		padding-left: $blh;
+
+		@media screen and (min-width: 768px) {
+			padding-left: $blh;	
+		}
 	}
 
 	li {
 		margin-bottom: $blh;
+	}
+
+	button {
+		border: none;
+		padding: 0;
+		position: absolute;
+		right: -4 * $blh;
+		top: 0;
+	}
+}
+
+.md-drawer-relative {
+	margin-left: 48px;
+
+	@media screen and (min-width: 768px) {
+		margin-left: 256px;
 	}
 }
 
@@ -111,13 +136,24 @@ img {
 	}
 
 	li {
-		margin: 0 2 * $blh;
+		flex: 1 0 auto;
 	}
 
 	a {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		height: 100%;
-		padding: 0 $blh;
+	}
+
+	@media screen and (min-width: 768px) {
+		a {
+			padding: 0 $blh;
+		}
+
+		li {
+			flex: 0 0 auto;
+			margin: 0  2 * $blh;
+		}
 	}
 }

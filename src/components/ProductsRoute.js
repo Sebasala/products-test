@@ -23,7 +23,7 @@ class ProductsRoute extends Component {
 
   render() {
     let navItems = [
-      <li><span>Categories</span></li>,
+      <li className="title-item"><span>Categories</span></li>,
       <li><NavLink exact to="/products"><FontIcon>list</FontIcon> All</NavLink></li>,
       <li className="md-list__divider-container"><Divider /></li>,
       <li><NavLink to="/products/tech"><FontIcon>computer</FontIcon> Tech</NavLink></li>,
@@ -42,6 +42,7 @@ class ProductsRoute extends Component {
           navItems={navItems}
           autoclose={false}
           desktopMinWidth={768}
+          mobileType={Drawer.DrawerTypes.TEMPORARY_MINI}
         />
         <div className="md-drawer-relative md-toolbar-relative">
           <Switch>
