@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import productsData from '../data/products';
 import { Route, Switch, NavLink } from 'react-router-dom';
+import { Drawer, Divider, FontIcon, Toolbar } from 'react-md';
 
 import Products from './Products';
 import ProductsCategory from './ProductsCategory';
-import { Drawer, Divider, FontIcon, Toolbar } from 'react-md';
+import MainNav from './MainNav';
 
 class ProductsRoute extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class ProductsRoute extends Component {
         <Toolbar
           colored
           fixed
+          children={<MainNav />}
         />
         <Drawer className="md-toolbar-relative"
           navItems={navItems}

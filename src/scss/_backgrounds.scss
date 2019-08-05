@@ -8,3 +8,9 @@ i {
         background-color: $light-gray;
     }
 }
+
+.main-nav {
+    .active {
+        background-color: $gray;
+    }
+}

@@ -18,6 +18,12 @@ a {
 	color: $white;
 }
 
+.main-nav {
+	a {
+		color: $black;
+	}	
+}
+
 /* FONTS */
 @import url($fonts-url);
 

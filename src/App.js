@@ -12,7 +12,7 @@ const App = (props) => {
       <Switch>
         <Route exact path="/" component={HomeRoute} />
         <Route path="/clients" component={ClientsRoute} />
-        <Route path="/contacts" component={ContactsRoute} />
+        <Route path="/contact" component={ContactsRoute} />
         <Route path="/products" component={ProductsRoute} />
         <Route component={NoMatch} />
       </Switch>

@@ -93,3 +93,25 @@ img {
 		margin-bottom: $blh;
 	}
 }
+
+.main-nav {
+	width: 100%;
+
+	ul {
+		display: flex;
+		justify-content: center;
+		height: 100%;
+		margin: 0 auto;
+	}
+
+	li {
+		margin: 0 2 * $blh;
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding: 0 $blh;
+	}
+}
